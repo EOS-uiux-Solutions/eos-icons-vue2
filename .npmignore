@@ -1,0 +1,12 @@
+scripts/
+svg/
+utils/
+template/
+interface/
+.github/
+
+.eslintignore
+.eslintrc.js
+.gitignore
+tsconfig.json
+gulpfile.ts
