@@ -1,4 +1,6 @@
 import generateIconComponents from './iconScript'
+import tsBuild from './buildScript'
+// import generateIconCommonComponents from './iconCommonScript'
 
 // Script for generating FILLED theme React SVG components
 if (process.argv[2] === '--target=filled') {
@@ -22,4 +24,16 @@ if (process.argv[2] === '--target=outlined') {
     type: 'outlined',
     from: 'svg/outlined'
   })
+}
+
+// Script for generating COMMON theme React SVG components
+// if (process.argv[2] === '--target=common') {
+//   generateIconCommonComponents({
+//     type: 'common',
+//     from: 'svg/filled'
+//   })
+// }
+
+if (process.argv[2] === '--target=build') {
+  tsBuild()
 }

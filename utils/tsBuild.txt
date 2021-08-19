@@ -1,0 +1,22 @@
+import Vue from 'vue';
+export interface ValueMap {
+    [index: string]: string | string;
+}
+export interface IconProps {
+    size?: string | number;
+    color?: string;
+    deg?: string;
+    horizontalFlip?: boolean;
+    verticalFlip?: boolean;
+}
+declare const _default: import("vue/types/vue").ExtendedVue<Vue, unknown, {
+    transform(deg: string, horizontalFlip: boolean, verticalFlip: boolean): String;
+    sizeFunction(size: string): String;
+}, unknown, {
+    size: string;
+    color: string;
+    deg: string;
+    horizontalFlip: boolean;
+    verticalFlip: boolean;
+}>;
+export default _default;

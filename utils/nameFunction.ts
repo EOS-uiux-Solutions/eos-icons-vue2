@@ -8,6 +8,6 @@ export function nameFunction ({ iconName, type }: NameProps) {
 
   // NAME_THEME
   const fileName = NAME.concat(THEME)
-
+  
   return (fileName)
 }

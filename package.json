@@ -1,43 +1,67 @@
 {
   "name": "eos-icons-vue2",
-  "version": "0.0.1",
-  "description": "Eos-icons Vue 2 npm package",
-  "main": "index.js",
+  "version": "1.0.0",
+  "description": "EOS-Icons vue 2 npm package",
+  "license": "MIT",
+  "main": "dist/vue2testrepo.ssr.js",
+  "browser": "dist/vue2testrepo.esm.js",
+  "module": "dist/vue2testrepo.esm.js",
+  "unpkg": "dist/vue2testrepo.min.js",
+  "types": "dist/types/src/entry.esm.d.ts",
+  "files": [
+    "dist/*"
+  ],
   "sideEffects": false,
   "scripts": {
-    "fetch": "gulp --require ts-node/register/transpile-only",
+    "serve": "vue-cli-service serve dev/serve.ts",
+    "fetch": "TS_NODE_PROJECT=tsconfigGulp.json gulp --require ts-node/register/transpile-only",
     "script:filled": "TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/index.ts --target=filled",
     "script:outlined": "TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/index.ts --target=outlined",
     "script:animated": "TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/index.ts --target=animated",
-    "icon": "mkdir -p src/icons && npm run script:filled && npm run script:outlined && npm run script:animated",
-    "generate": "npm run fetch && npm run icon"
+    "icon": "mkdir -p src/lib-components && npm run script:filled && npm run script:outlined && npm run script:animated",
+    "build": "rimraf ./dist && cross-env NODE_ENV=production rollup --config build/rollup.config.js",
+    "script:build": "mkdir -p dist/types/lib-components && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/index.ts --target=build",
+    "generate": "npm run fetch && npm run icon && npm run build && npm run script:build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/EOS-uiux-Solutions/eos-icons-vue2.git"
-  },
-  "author": "Vinayak Sharma",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/EOS-uiux-Solutions/eos-icons-vue2/issues"
-  },
-  "homepage": "https://github.com/EOS-uiux-Solutions/eos-icons-vue2#readme",
+  "dependencies": {},
   "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-typescript": "^7.14.5",
+    "@rollup/plugin-alias": "^3.1.2",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^14.0.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@rollup/plugin-replace": "^2.4.2",
     "@semantic-release/commit-analyzer": "^8.0.1",
     "@semantic-release/git": "^9.0.0",
-    "@semantic-release/github": "^7.2.3",
     "@semantic-release/npm": "^7.1.3",
     "@semantic-release/release-notes-generator": "^9.0.3",
     "@types/gulp": "^4.0.9",
+    "@vue/cli-plugin-babel": "^4.5.13",
+    "@vue/cli-plugin-typescript": "^4.5.13",
+    "@vue/cli-service": "^4.5.13",
+    "@zerollup/ts-transform-paths": "^1.7.18",
     "conventional-changelog-eslint": "^3.0.9",
+    "cross-env": "^7.0.3",
     "del": "^6.0.0",
     "eos-icons": "^5.2.1",
     "gulp": "^4.0.2",
-    "semantic-release": "^17.4.4",
-    "typescript": "^4.3.5"
+    "minimist": "^1.2.5",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.52.8",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "rollup-plugin-vue": "^5.1.9",
+    "semantic-release": "^17.4.5",
+    "ts-node": "^10.2.0",
+    "ttypescript": "^1.5.12",
+    "typescript": "^4.0.3",
+    "vue": "^2.6.14",
+    "vue-template-compiler": "^2.6.14"
   },
   "peerDependencies": {
-    "vue": "^2.6.11"
+    "vue": "^2.6.14"
   },
   "engines": {
     "node": ">=12"

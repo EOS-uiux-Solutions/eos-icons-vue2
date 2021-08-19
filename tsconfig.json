@@ -1,14 +1,52 @@
 {
     "compilerOptions": {
-      "strict": true,
-      "target": "esnext",
-      "module": "commonjs",
-      "moduleResolution": "node",
-      "allowSyntheticDefaultImports": true,
-      "esModuleInterop": true,
-      "jsx": "preserve",
-      "resolveJsonModule": true,
-      "skipLibCheck": true
-    }
+        "target": "esnext",
+        "module": "esnext",
+        "strict": true,
+        "declaration": true,
+        "declarationDir": "dist/types",
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "importHelpers": true,
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "sourceMap": true,
+        "baseUrl": ".",
+        "newLine": "lf",
+        "types": [
+            "node",
+            "vue"
+        ],
+        "paths": {
+            "@/*": [
+                "src/*"
+            ]
+        },
+        "plugins": [
+            {
+                "transform":"@zerollup/ts-transform-paths",
+                "exclude": ["*"]
+            }
+        ],
+        "lib": [
+            "esnext",
+            "dom",
+            "dom.iterable",
+            "scripthost"
+        ]
+    },
+    "exclude": [
+        "node_modules",
+        "dist",
+        "utils",
+        "gulpfile.ts",
+        "scripts",
+        "template",
+        "svg",
+        "interface",
+        "dev"
+    ],
+
 }
-  
