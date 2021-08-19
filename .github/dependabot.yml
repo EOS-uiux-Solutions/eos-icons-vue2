@@ -1,0 +1,13 @@
+
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    reviewers:
+      - "vinayaksh42"
+      - "EOS-uiux-Solutions/mentors"
+    allow:
+      - dependency-name: "eos-icons"
+    versioning-strategy: increase
