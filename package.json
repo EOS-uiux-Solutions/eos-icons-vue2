@@ -2,7 +2,6 @@
   "name": "eos-icons-vue2",
   "version": "1.0.0",
   "description": "EOS-Icons vue 2 npm package",
-  "license": "MIT",
   "main": "dist/vue2testrepo.ssr.js",
   "browser": "dist/vue2testrepo.esm.js",
   "module": "dist/vue2testrepo.esm.js",
@@ -23,7 +22,16 @@
     "script:build": "mkdir -p dist/types/lib-components && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/index.ts --target=build",
     "generate": "npm run fetch && npm run icon && npm run build && npm run script:build"
   },
-  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EOS-uiux-Solutions/eos-icons-vue2.git"
+  },
+  "author": "Vinayak Sharma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EOS-uiux-Solutions/eos-icons-vue2/issues"
+  },
+  "homepage": "https://github.com/EOS-uiux-Solutions/eos-icons-vue2#readme",
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.7",
