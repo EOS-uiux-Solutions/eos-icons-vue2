@@ -1,7 +1,7 @@
 # eos-icons-Vue 2
 [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
-<!-- [![NPM Package](https://img.shields.io/npm/v/eos-icons-react.svg)](https://www.npmjs.com/package/eos-icons-react) 
-[![NPM Downloads](https://img.shields.io/npm/dm/eos-icons-react.svg)](https://www.npmjs.com/package/eos-icons-react) -->
+[![NPM Package](https://img.shields.io/npm/v/eos-icons-vue2.svg)](https://www.npmjs.com/package/eos-icons-vue2) 
+[![NPM Downloads](https://img.shields.io/npm/dm/eos-icons-vue2.svg)](https://www.npmjs.com/package/eos-icons-vue2)
 
 ## Using eos-icons-react in your projects
 Refer to [EOS Icons](https://eos-icons.com/) for more details about all the icons that are supported by EOS-Icons Vue 2
