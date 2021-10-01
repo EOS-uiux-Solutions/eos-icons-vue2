@@ -1,6 +1,6 @@
 {
   "name": "eos-icons-vue2",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "EOS-Icons vue 2 npm package",
   "main": "dist/vue2testrepo.ssr.js",
   "browser": "dist/vue2testrepo.esm.js",
