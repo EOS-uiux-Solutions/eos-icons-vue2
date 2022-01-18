@@ -53,7 +53,7 @@
     "conventional-changelog-eslint": "^3.0.9",
     "cross-env": "^7.0.3",
     "del": "^6.0.0",
-    "eos-icons": "^5.3.1",
+    "eos-icons": "^5.4.0",
     "gulp": "^4.0.2",
     "minimist": "^1.2.5",
     "rimraf": "^3.0.2",
